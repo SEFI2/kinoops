@@ -1,0 +1,53 @@
+<link href="/css/navigationbar.css" rel="stylesheet"/>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="/"><img class="img-responsive" height="20px" width="20px"  src="/images/homepage/icon1.png"></a>
+            </li>
+
+            <%navcoll.forEach(function (item) {%>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+                        <%=item.name%><span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <%item.category.forEach(function(cat){%>
+                        <li><a href="<%=cat.link%>"><%=cat.catname%></a></li>
+                        <%});%>
+                    </ul>
+                </li>
+            <%});%>
+
+            <li>
+                <a href="/bucket">
+                    <span class="glyphicon glyphicon-folder-close"></span>
+                    Корзина
+                </a>
+            </li>
+
+            <li>
+                <a href="/about">
+                    <span class="glyphicon glyphicon-envelope"></span>
+                    О сайте
+                </a>
+            </li>
+
+
+
+
+        </ul>
+    </div>
+</nav>

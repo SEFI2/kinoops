@@ -1,0 +1,135 @@
+[
+  {
+    "name" : "По жанрам",
+    "category" :
+      [
+        {
+          "catname" : "Комедии",
+          "link" : "/movies/comedy.html"
+        }
+        ,
+        {
+          "catname" : "Триллеры",
+          "link" : "/movies/thriller.html"
+        }
+        ,
+        {
+          "catname" : "Ужасы",
+          "link" : "/movies/horror.html"
+        }
+        ,
+        {
+          "catname" : "Драмы",
+          "link" : "/movies/drama.html"
+        }
+        ,
+        {
+          "catname" : "Мелодрамы",
+          "link" : "/movies/melodrama.html"
+        }
+        ,
+        {
+          "catname" : "Детектив",
+          "link" : "/movies/detective.html"
+        }
+        ,
+        {
+          "catname" : "Анимации",
+          "link" : "/movies/animation.html"
+        }
+        ,
+        {
+          "catname" : "Документальные",
+          "link" : "/movies/mystery.html"
+        }
+      ]
+  }
+  ,
+  {
+    "name" : "По выпуску",
+    "category" :
+    [
+      {
+        "catname" : "Новые",
+        "link" : "/movies/new.html"
+      }
+      ,
+      {
+        "catname" : "2010-2016",
+        "link" : "/movies/2010-2016.html"
+      }
+      ,
+      {
+        "catname" : "2000-2010",
+        "link" : "/movies/2000-2010.html"
+      }
+      ,
+      {
+        "catname" : "1990-2000",
+        "link" : "/movies/1990-2000.html"
+      }
+    ]
+  }
+  ,
+  {
+    "name" : "По странам",
+    "category" :
+    [
+      {
+        "catname" : "США",
+        "link" : "/movies/USA.html"
+      }
+      ,
+      {
+        "catname" : "Индия",
+        "link" : "/movies/India.hmtl"
+      }
+      ,
+      {
+        "catname" : "Китай",
+        "link" : "/movies/China.html"
+      }
+      ,
+      {
+        "catname" : "Россия",
+        "link" : "/movies/Russia.html"
+      }
+      ,
+      {
+        "catname" : "Казахстан",
+        "link" : "/movies/Kazakhstan.html"
+      }
+      ,
+      {
+        "catname" : "Кыргызстан",
+        "link" : "/movies/Kyrgyzstan.html"
+      }
+    ]
+  }
+  ,
+  {
+    "name" : "По премиям",
+    "category" :
+    [
+      {
+        "catname" : "Оскар",
+        "link" : "/movies/Oscar.html"
+      }
+      ,
+      {
+        "catname" : "Золотой глобус",
+        "link" : "/movies/Globus.html"
+      }
+      ,
+      {
+        "catname" : "Сатурн",
+        "link" : "/movies/Saturn.html"
+      }
+      ,
+      {
+        "catname" : "Золотой орёл",
+        "link" : "/movies/Orel.html"
+      }
+    ]
+  }
+]

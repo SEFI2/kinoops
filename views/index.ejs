@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> КиноУпс - сборник лучших фильмов и списки по разным номинациям и категориям </title>
+  <title><i class="icon-user icon-black"></i>Webnet</title>
+    <link href="/css/homepage.css" rel="stylesheet"/>
+    <link href="/css/carousel.css" rel="stylesheet"/>
+      <% include embeded/headfile.ejs %>
+    <style type="text/css">
+
+      .carousel {
+        width:auto;
+        height:600px;
+        background: #9CE9F7;
+        margin: 30px;
+        padding: 30px 10px 10px 10px;
+
+      }
+
+      .carousel-inner > .item > img {
+        width:1300px;
+        height:600px;
+        margin:0 auto;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <% include embeded/navigationbar.ejs %>
+
+    <% include embeded/carousel.ejs %>
+
+    <div class="container" id = "mainarea">
+
+        <%var counter = 0; homejson.forEach(function(item) {%>
+        <%if (counter == 0 || counter == 3 || counter == 7){%>
+          <div class="row row-content">
+        <%}%>
+
+      <div class="col-xs-12 <%=item.size%>">
+          <div class="media">
+            <div class="media-middle">
+              <a href="<%=item.link%>">
+                <img class="media-object img-thumbnail" alt="<%item.image%>" src="<%=item.image%>" id = "1st"/>
+              </a>
+            </div>
+            <div class="media-body">
+              <p class="media-heading"> <strong><em><%=item.name%></em></strong>
+                  <%if (counter < 3){%>
+                    <span class="label label-danger label-xs">Новый</span>
+                  <%}else{%>
+                    <span class="label label-success label-xs">Рекомендованно</span>
+                  <%}%>
+              </p>
+
+            </div>
+           </div>
+        </div>
+              <%if (counter == 2){%>
+
+              <%}%>
+
+              <%if (counter == 2 || counter == 6 || counter == 10){%>
+              </div >
+               <%}counter++;%>
+
+        <%});%>
+
+    </div>
+    </div>
+
+    <% include embeded/footer.ejs %>
+
+  </body>
+</html>

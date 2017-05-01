@@ -1,0 +1,138 @@
+
+<div class="container">
+
+        <%var counter = 1; movies.forEach(function(item) {%>
+        <%if(counter % 3 == 1){%>
+            <div class="row row-movie">
+        <%} %>
+
+        <div class="col-xs-12 col-sm-4">
+            <div class="media">
+                <div class="media-middle">
+                        <%var imagelink = '/'  + item.image;%>
+                       <img alt="<%=item.name%>" class="media-object img-thumbnail" src="<%=imagelink%>"/>
+                </div>
+            </div>
+            <p>
+                <a href="<%=item.trailer%>">
+                     <button type="button" class="btn btn-info">  Смотреть трейлер  </button>
+                </a>
+
+                <button type="button" class="btn btn-danger" id = "<%=item.id%>">  Добавить в корзину  </button>
+
+
+            </p>
+
+            <h2>
+                <%=item.name%>
+            </h2>
+
+            <p>
+                <strong>Режиссер:</strong> <%=item.director%>
+            </p>
+            <p>
+                <strong>Год:</strong> <%=item.year%>
+            </p>
+            <p>
+                <strong>Страна:</strong> <%=item.country%>
+            </p>
+
+            <p>
+                <strong>Жанр:</strong> <%=item.genre%>
+            </p>
+            <p>                <strong>Актеры</strong>: <%=item.cast%>
+            </p>
+            <p>
+                <em>
+                    <%=item.overview%>
+                </em>
+            </p>
+
+
+            <div class = "dropup">
+                <button type="button" class="btn btn-success dropwdown-toggle" data-toggle="dropdown"> Смотреть бесплатно  </button>
+
+                <ul class="dropdown-menu">
+                    <%if(item.gidonline) {%>
+                    <li> <a href="<%=item.gidonline%>">  <span class="glyphicon glyphicon-film"></span> <strong>  GIDONLINE</strong>   </a>
+                    </li>
+                    <%} %>
+
+                    <%if(item.kinogo) {%>
+                    <li><a href="<%=item.kinogo%>"> <span class="glyphicon glyphicon-film"></span> <strong>   KINOGO </strong> </a>
+                    </li><%} %>
+
+
+                    <%if( item.namba) {%>
+                    <li><a href="<%=item.namba%>">   <span class="glyphicon glyphicon-film"></span> <strong>  NAMBA</strong> </a>
+                    </li><%} %>
+
+                    <%if( item.megogo) {%>
+                    <li><a href="<%=item.megogo%>">   MEGOGO</a>
+                    </li><%} %>
+                </ul>
+            </div>
+
+
+        </div>
+                <%if(counter % 3 == 0){%>
+                    </div>
+                <%} counter ++;%>
+
+        <%});%>
+    <%if(counter % 3 == 0 || counter%3 == 2){%>
+    </div>
+    <%}%>
+
+
+</div>
+
+<script>
+    $(function () {
+        var clickfunction = function () {
+            var clicked;
+            if (localStorage.getItem("liked") === null)
+                clicked = [];
+            else
+                clicked = JSON.parse(localStorage.getItem("liked"));
+
+            var cl = $(this).attr("class");
+            if (cl === "btn btn-danger") {
+                $(this).removeClass("btn-danger").addClass("btn-warning");
+                $(this).text("Удалить из корзины");
+                clicked.push($(this).attr("id"));
+            }
+            else{
+                $(this).removeClass("btn-warning").addClass("btn-danger");
+                $(this).text("Добавить в корзину");
+                clicked.splice(clicked.indexOf($(this).attr("id")) , 1);
+            }
+            localStorage.setItem("liked" , JSON.stringify(clicked));
+        };
+
+
+        $(".btn.btn-danger").on("click" , clickfunction);
+        var clicked;
+        if (localStorage.getItem("liked") === null)
+            clicked = [];
+        else
+            clicked = localStorage.getItem("liked");
+
+        <%movies.forEach(function (item) {%>
+                var ID = "<%=item.id%>";
+                if (clicked.indexOf(ID) > -1) {
+                    $("#" + ID).removeClass("btn-danger").addClass("btn-warning");
+                    $("#" + ID).text("Удалить из корзины")
+                }
+
+        <%})%>
+
+
+
+
+
+
+    });
+
+
+</script>

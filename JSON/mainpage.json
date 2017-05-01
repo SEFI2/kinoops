@@ -1,0 +1,78 @@
+[
+  {
+    "name" : "100 лучших классических фильмов для всех типов людей",
+    "link" : "movies/1st.html",
+    "image" : "images/homepage/1st.jpg",
+    "size" : "col-sm-4"
+  }
+  ,
+  {
+    "name" : "11 фильмов, чтобы посмотреть на выходных и посмеяться",
+    "link" : "movies/2nd.html",
+    "image" : "images/homepage/2nd.jpg",
+    "size" : "col-sm-4"
+  }
+  ,
+  {
+    "name" : "15 грандиозных фильмов на все времена года",
+    "link" : "movies/3rd.html",
+    "image" : "images/homepage/3rd.jpg",
+    "size" : "col-sm-4"
+  }
+  ,
+  {
+    "name" : "Топ психологических фильмов которые будут держать вас в напряжении",
+    "link" : "movies/4th.html",
+    "image" : "images/homepage/4th.jpg",
+    "size" : "col-sm-3"
+  }
+  ,
+  {
+    "name" : "Нереально крутые фильмы основанные на реальных событиях",
+    "link" : "movies/5th.html",
+    "image" : "images/homepage/5th.jpg",
+    "size" : "col-sm-3"
+  }
+  ,
+  {
+    "name" : "10 неголливудских фильмов для тех, кто устал от банальных сюжетов",
+    "link" : "movies/6th.html",
+    "image" : "images/homepage/6th.jpg",
+    "size" : "col-sm-3"
+  }
+  ,
+  {
+    "name" : "10 неголливудских фильмов для тех, кто устал от банальных сюжетов",
+    "link" : "movies/7th.html",
+    "image" : "images/homepage/7th.jpg",
+    "size" : "col-sm-3"
+  }
+  ,
+  {
+    "name" : "10 неголливудских фильмов для тех, кто устал от банальных сюжетов",
+    "link" : "movies/8th.html",
+    "image" : "images/homepage/8th.jpg",
+    "size" : "col-sm-3"
+  }
+  ,
+  {
+    "name" : "10 неголливудских фильмов для тех, кто устал от банальных сюжетов",
+    "link" : "movies/9th.html",
+    "image" : "images/homepage/9th.jpg",
+    "size" : "col-sm-3"
+  }
+  ,
+  {
+    "name" : "10 неголливудских фильмов для тех, кто устал от банальных сюжетов",
+    "link" : "movies/10th.html",
+    "image" : "images/homepage/10th.jpg",
+    "size" : "col-sm-3"
+  }
+  ,
+  {
+    "name" : "10 неголливудских фильмов для тех, кто устал от банальных сюжетов",
+    "link" : "movies/11th.html",
+    "image" : "images/homepage/11th.jpg",
+    "size" : "col-sm-3"
+  }
+]

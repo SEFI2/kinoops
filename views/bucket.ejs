@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Корзина - место для ваших любимых фильмов </title>
+    <title><i class="icon-user icon-black"></i>Webnet</title>
+    <link href="/css/homepage.css" rel="stylesheet"/>
+    <% include embeded/headfile.ejs %>
+</head>
+
+<body>
+<% include embeded/navigationbar.ejs %>
+
+    <script>
+
+        function postData() {
+            var clicked;
+            if (localStorage.getItem("liked") === null)
+                clicked = [];
+            else
+                clicked = localStorage.getItem("liked");
+
+            $.ajax({
+                type: 'POST',
+                url: 'http://localhost:3000/notes',
+                contentType: 'application/json',
+                dataType: 'json',
+                data : clicked,
+                success: function () {
+                    window.location.href="/movies/bucket.html";
+
+                },
+                error: function () {
+//                    window.location.href="/movies/bucket.html";
+
+                }
+
+            });
+        }
+
+        postData();
+
+
+    </script>
+
+<% include embeded/footer.ejs %>
+
+</body>
+</html>

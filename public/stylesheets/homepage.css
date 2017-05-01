@@ -1,0 +1,36 @@
+#mainarea{
+    padding: 50px 10px 10px 10px;
+}
+
+#jumb {
+    padding:70px 30px 70px 30px;
+    margin:0px auto;
+    background-color: #DDEDE8;
+    max-height: 380px;
+    min-height: 380px;
+
+}
+body{
+    padding:0px 0px 0px 0px;
+    z-index:0;
+}
+
+.row-header {
+    margin: 0px auto;
+    padding: 0px auto;
+}
+.row-content {
+    margin : 0px auto;
+    padding: 10px 5px 5px 5px;
+}
+
+.img-thumbnail {
+    width: 100%;
+    padding:5px 5px 5px 5px;
+    margin:10px auto;
+}
+
+
+
+
+
